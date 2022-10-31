@@ -3,6 +3,16 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 from torch.utils.data import DataLoader
 
+# # Return only images of certain class (eg. airplanes = class 0)
+# def get_same_index(target, label):
+#     label_indices = []
+#
+#     for i in range(len(target)):
+#         if target[i] == label:
+#             label_indices.append(i)
+#
+#     return label_indices
+
 
 class Data:
     def __init__(self, args, is_evaluate=False):
@@ -27,6 +37,10 @@ class Data:
                     transforms.ToTensor(),
                     normalize,
                 ]))
+
+            # # Get indices of label_class
+            # train_indices = get_same_index(trainset.targets, label_class)
+
 
             self.loader_train = DataLoader(
                 trainset,

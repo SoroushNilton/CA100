@@ -31,7 +31,7 @@ size_of_layer = [64, 64, 64, 256, 256,
                  ]
 
 # Commneted Section to test ======= Un-comment =====================================
-pickle_file = 'filter_selection/resnet_50/ResNet_dict_of_filters_to_keep_R1_BelowAVG_R1_Medoids.pickle'
+pickle_file = 'filter_selection/resnet_50/POST_CLEAN_JUST_R1_MEDOIDandBELOWAVG.pickle'
 
 
 with open(pickle_file, 'rb') as handle:
